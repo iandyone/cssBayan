@@ -2,10 +2,11 @@
 
 /* === VARIABLES === */
 :root {
-    --main: #fff;
+    --main: #EEEEEE;
     --hover: #86efac;
-    --active: #22c55e;
+    --active: #00ADB5;
     --base-height: 25.25rem;
+    --black: #222831;
     --transition: all 0.3s ease;
 }
 /* ================= */
@@ -39,7 +40,6 @@
     transition: var(--transition);
 }
 .accordion-item {
-    border-bottom: 1px solid #ccc;
     padding-bottom: 0.5em;
     transition: var(--transition);
     overflow: hidden;
@@ -63,6 +63,8 @@
     padding: 0.2rem 0;
     color: var(--main);
     transition: var(--transition);
+    background-color: var(--black);
+    padding: 0 1em;
 }
 .accordion-button {
     width: 1rem;
@@ -98,7 +100,7 @@
 .accordion-item > input:checked ~ .accordion-content {
     padding: 1em 0;
     color: var(--active);
-    height: var(--base-height);
+    height: 27.5rem;;
     transition: var(--transition);
 }
 .accordion-item > input:checked ~ label > .accordion-header> .accordion-button {
@@ -137,7 +139,7 @@
         height: 1rem;
     }
     .accordion-item > input:checked ~ .accordion-content {
-        height: 15.625rem;
+        height: 17rem;
     }
     .accordion-image img {
         min-height: auto;
