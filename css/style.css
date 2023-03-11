@@ -44,6 +44,9 @@
     transition: var(--transition);
     overflow: hidden;
 }
+.accordion-item > input {
+    display: none;
+}
 .accordion-item:active > * {
     opacity: 0.5;
     transition: var(--transition);
@@ -88,17 +91,17 @@
     height: 100%;
     min-height: var(--base-height);
 }
-.accordion-item:target .accordion-header {
+.accordion-item > input:checked ~ label > .accordion-header {
     color: var(--active);
     transition: var(--transition);
 }
-.accordion-item:target .accordion-content {
+.accordion-item > input:checked ~ .accordion-content {
     padding: 1em 0;
     color: var(--active);
     height: var(--base-height);
     transition: var(--transition);
 }
-.accordion-item:target .accordion-button {
+.accordion-item > input:checked ~ label > .accordion-header> .accordion-button {
     transform: rotate(0deg);
     transition: var(--transition);
 }
@@ -133,7 +136,7 @@
         width: 1rem;
         height: 1rem;
     }
-    .accordion-item:target .accordion-content {
+    .accordion-item > input:checked ~ .accordion-content {
         height: 15.625rem;
     }
     .accordion-image img {
